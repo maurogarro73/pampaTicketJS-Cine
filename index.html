@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- SEO -->
+        <meta name="description" content="Pampa Ticket - Venta de entradas para los mejores espectáculos culturales. Busca y encuentra entradas online para disfrutar de tu evento favorito.">
+        <meta name="keywords" content="CULTURAL, ONLINE, ENTRADA, RECITAL, TEATRO, CONCIERTO, EVENTO">
+        <!-- BOOTSTRAP -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="shortcut icon" href="img/android-chrome-192x192.png" type="image/x-icon">
+        <title>pampaTicket</title>
+    </head>
+    <body>
+
+        <!----------------- HEADER ----------------->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+                <div class="container-fluid container">
+                    <a class="navbar-brand logo" href="index.html"><img src="img/logo.png" alt="Imagen logo"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link activa" aria-current="page" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/nosotros.html">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/recitales.html">Recitales</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/login.html">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-------------------------------- MAIN -------------------------------->
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/portada.jpg" class="d-block w-100" alt="imagen portada">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>CONSEGUÍ TU ENTRADA ONLINE</h1>
+                        <p>Te la enviamos a la puerta de tu casa</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/portada1.jpg" class="d-block w-100" alt="imagen portada">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>RECITALES, TEATRO, EVENTOS CULTURALES</h2>
+                        <p>Cualquier evento ocurrido en la provincia de La Pampa</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/portada2.jpg" class="d-block w-100" alt="imagen portada">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>PROMOCIONES EN 2X1</h2>
+                        <p>Unicamente para eventos locales</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---------- SECCION SOBRE NOSOTROS ---------->
+        <div class="contenedor contenedorindex">
+            <img src="img/ticketMano1.jpg" alt="Sobre Nosotros">
+            <div class="sobreNosotros">
+                <h2>Sobre Nosotros</h2>
+                <p>Somos, Pampa Ticket, una empresa independiente de capitales 100% argentinos. Fundada en el 2008, con oﬁcinas en Santa Rosa, La Pampa, Argentina. Contamos con un equipo de profesionales con más de 20 años de experiencia en el negocio venta de entradas y entretenimiento.</p>
+            </div>
+        </div>
+
+        <!---------- SECCION PRÓXIMOS RECITALES ---------->
+        <section class="container">
+            <h2 class="col-12 text-center titulo">Próximos recitales</h2>
+
+            <div class="row">
+
+                <!-- CARD 1 -->
+                <div class="card my-2">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="img/recital1.jpg" class="img-fluid rounded-start" alt="foto recital">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Bersuit Vergarabat</h5>
+                                <div class="linea"></div>
+                                <p class="card-text">Presentando su gira 2022 se presenta el 4 de Junio a las 16:00 Hs con un show único e irrepetible.</p>
+                                <div class="lugar row w-100 m-auto  d-flex justify-content-center col text-center">
+                                    <div class="ubicacion  mb-2 m-4 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                        </svg>
+                                        <p class="card-text">Club All-Boys</p>
+                                    </div>
+                                    <div class="col text-center">
+                                        <button type="button" class="btn btn-warning btn-lg m-4" data-bs-toggle="modal" data-bs-target="#comprar">Comprar Entrada</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="card my-2">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="img/recital2.jpg" class="img-fluid rounded-start" alt="foto recital">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">DIVIDIDOS</h5>
+                                <div class="linea"></div>
+                                <p class="card-text">Vuelve al Club Estudiantes por 5ta vez el próximo 27 de junio con un show NO APTO PARA MENORES DE 7 AÑOS</p>
+                                <div class="lugar row w-100 m-auto  d-flex justify-content-center col text-center">
+                                    <div class="ubicacion  mb-2 m-4 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                        </svg>
+                                        <p class="card-text">Club Estudiante</p>
+                                    </div>
+                                    <div class="col text-center">
+                                        <button type="button" class="btn btn-warning btn-lg m-4" data-bs-toggle="modal" data-bs-target="#comprar">Comprar Entrada</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="card my-2">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="img/recital3.jpg" class="img-fluid rounded-start" alt="foto recital">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">No te va gustar</h5>
+                                <div class="linea"></div>
+                                <p class="card-text">No Te Va Gustar se presentan en el Microestadio Municipal el próximo 10 de agosto a las 20hs con bandas soporte.</p>
+                                <div class="lugar row w-100 m-auto  d-flex justify-content-center col text-center">
+                                    <div class="ubicacion  mb-2 m-4 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                        </svg>
+                                        <p class="card-text">Microestadio Municipal</p>
+                                    </div>
+                                    <div class="col text-center">
+                                        <button type="button" class="btn btn-warning btn-lg m-4" data-bs-toggle="modal" data-bs-target="#comprar">Comprar Entrada</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="card my-2">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="img/recital6.jpg" class="img-fluid rounded-start" alt="foto recital">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Celia Cruz</h5>
+                                <div class="linea"></div>
+                                <p class="card-text">Por primera vez en Santa Rosa. A días de arrancar la caravana de 10 Gran Rex agotados y con un recorrido de punta a punta por el país.</p>
+                                <div class="lugar row w-100 m-auto  d-flex justify-content-center col text-center">
+                                    <div class="ubicacion  mb-2 m-4 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                        </svg>
+                                        <p class="card-text">Club Estudiante</p>
+                                    </div>
+                                    <div class="col text-center">
+                                        <button type="button" class="btn btn-warning btn-lg m-4" data-bs-toggle="modal" data-bs-target="#comprar">Comprar Entrada</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!---------------- FOOTER ---------------->
+        <footer class="bg-dark text-center text-white">
+            <div class="container p-4 pb-0">
+                <section class="">
+                    <form action="">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-auto">
+                                <p class="pt-2">
+                                    <strong>Suscribite a nuestro newsletter</strong>
+                                </p>
+                            </div>
+                            <div class="col-md-5 col-12">
+                                <div class="form-outline form-white mb-4">
+                                    <input type="email" id="form5Example29" class="form-control" />
+                                    <label class="form-label" for="form5Example29">Email</label>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-outline-light mb-4">
+                                    Suscribite
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                <a class="text-white" href="index.html">&#169 2022 | Todos los derechos reservados | Hecho por Mauro Garro</a>
+            </div>
+        </footer>
+
+        <!-- Modal -->
+        <div class="modal fade" id="comprar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">COMPRASTE!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Gracias por tu compra!!</h3>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-success">Seguir comprando</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- script Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+</html>
