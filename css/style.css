@@ -1,28 +1,33 @@
-@import url("https://fonts.googleapis.com/css2?family=Murecho:wght@300;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Murecho:wght@300;600&display=swap');
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 body {
-  background-color: #F0F0F0;
-  font-family: 'Murecho', sans-serif; }
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  font-family: 'Murecho', sans-serif;
+}
 
 .activa {
-  border-bottom: 2px solid #F26D3D; }
+  border-bottom: 2px solid #f26d3d;
+}
 
 /*********************  HEADER *********************/
 .logo img {
-  height: 50px; }
+  height: 50px;
+}
 
 .navbar-light .navbar-nav .nav-link {
-  color: #F26D3D;
+  color: #f26d3d;
   padding: 10px;
-  font-size: 18px; }
+  font-size: 18px;
+}
 
 /***************  SOBRE NOSOTROS  ***************/
 .contenedor {
   background-color: #353535;
-  color: #F0F0F0;
+  color: #f0f0f0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,7 +47,7 @@ body {
 .contenedor .sobreNosotros h2 {
   text-align: center;
   margin-bottom: 10px;
-  font-size: 30px; 
+  font-size: 30px;
 }
 
 .contenedor .sobreNosotros p {
@@ -64,17 +69,17 @@ body {
 }
 
 .ubicacion svg {
-  color: #F26D3D;
+  color: #f26d3d;
 }
 
 .ubicacion p {
-  color: #F26D3D;
+  color: #f26d3d;
 }
 
 .lugar button {
   color: #fff;
-  background-color: #F26D3D;
-  border: 1px #F26D3D solid;
+  background-color: #f26d3d;
+  border: 1px #f26d3d solid;
   border-radius: 10px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
@@ -122,7 +127,6 @@ body {
   margin: auto;
 }
 
-
 /***************  COMO COMPRAR  ***************/
 .comoComprar {
   background-color: #273440;
@@ -155,7 +159,6 @@ body {
   width: 100%;
   height: 300px;
 }
-
 
 /***************  NUESTRO LOCAL  ***************/
 .nuestroLocal {
@@ -230,7 +233,6 @@ body {
   font-weight: 400;
 }
 
-
 .formulario input {
   border: none;
   border-bottom: 2px solid #212529;
@@ -261,7 +263,7 @@ body {
   width: 50%;
   font-size: 18px;
   color: #273440;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   border: none;
   height: 55px;
   font-weight: 700;
@@ -284,7 +286,7 @@ body {
  ========================= PAGINA LOGIN ==========================
 */
 .imgIzq {
-  background-image: url("../img/ticketPared.jpg");
+  background-image: url('../img/ticketPared.jpg');
   background-position: center center;
   background-size: cover;
 }
@@ -293,7 +295,7 @@ body {
 .footer {
   background-color: #273440;
   text-align: center;
-  color: #F0F0F0;
+  color: #f0f0f0;
   margin-top: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -345,7 +347,8 @@ body {
 
   /****************CONTACTO****************/
   .contacto {
-    width: 70%; }
+    width: 70%;
+  }
   .formulario .boton {
     width: 100%;
   }
@@ -401,7 +404,8 @@ body {
   .contacto {
     width: 90%;
   }
-  .contacto input, .contacto textarea {
+  .contacto input,
+  .contacto textarea {
     width: 100%;
   }
   .formulario .boton {
