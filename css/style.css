@@ -5,12 +5,16 @@
 }
 
 body {
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-  font-family: 'Murecho', sans-serif;
+  background: #c9d6ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #e2e2e2, #c9d6ff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background-blend-mode: multiply;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .activa {
-  border-bottom: 2px solid #f26d3d;
+  border-bottom: 2px solid #30cfd0;
 }
 
 /*********************  HEADER *********************/
@@ -19,9 +23,10 @@ body {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #f26d3d;
+  color: #353535;
   padding: 10px;
   font-size: 18px;
+  font-weight: 500;
 }
 
 /***************  SOBRE NOSOTROS  ***************/
@@ -47,13 +52,19 @@ body {
 .contenedor .sobreNosotros h2 {
   text-align: center;
   margin-bottom: 10px;
-  font-size: 30px;
+  font-size: 35px;
+  font-weight: bold;
 }
 
 .contenedor .sobreNosotros p {
   text-align: justify;
   margin-top: 20px;
   font-size: 17px;
+  font-weight: bold;
+}
+
+.text-white {
+  text-decoration: none;
 }
 
 /***************  PROXIMAS PELICULAS  ***************/
@@ -69,17 +80,17 @@ body {
 }
 
 .ubicacion svg {
-  color: #f26d3d;
+  color: #30cfd0;
 }
 
 .ubicacion p {
-  color: #f26d3d;
+  color: #30cfd0;
 }
 
 .lugar button {
   color: #fff;
-  background-color: #f26d3d;
-  border: 1px #f26d3d solid;
+  background-color: #330867;
+  border: 1px #330867 solid;
   border-radius: 10px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
@@ -286,7 +297,7 @@ body {
  ========================= PAGINA LOGIN ==========================
 */
 .imgIzq {
-  background-image: url('../img/ticketPared.jpg');
+  background-image: url('../img/1154.jpg');
   background-position: center center;
   background-size: cover;
 }
