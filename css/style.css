@@ -214,6 +214,10 @@ body {
 /*
  ========================= PAGINA NUESTROS COMBOS ==========================
 */
+.card-TicketSelected {
+  max-width: 540px;
+}
+
 .proxRecitales .titulo {
   text-transform: uppercase;
   margin-top: 15px;

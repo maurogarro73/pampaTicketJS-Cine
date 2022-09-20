@@ -238,6 +238,48 @@
         </section>
 
 
+        <!---------------- Carrito detalle de compra ---------------->
+        <h2 class="col-12 text-center titulo">Pelicula seleccionada</h2>
+        <div class="card mb-3 container card-TicketSelected">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="../img/pulpFiction.jpg" class="img-fluid rounded-start" alt="imagen portada">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Pulp Fiction</h5>
+                <p class="card-text">La vida de un boxeador, dos sicarios, la esposa de un gánster y dos bandidos se entrelaza en una historia de violencia y redención.</p>
+                <p class="card-text">
+                  <small class="text-muted">
+                    <div class="form-floating">
+                      <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                        <option selected>Selecciona fecha</option>
+                        <option value="1">Jue 22/09/2022 - 20 hs</option>
+                        <option value="2">Jue 22/09/2022 - 22:30 hs</option>
+                        <option value="3">Vie 23/09/2022 - 22:30 hs</option>
+                      </select>
+                      <label for="floatingSelect">Valor: $800 c/u</label>
+                    </div>
+                  </small>
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">
+                    <div class="form-floating">
+                      <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                        <option selected>Cantidad entradas</option>
+                        <option value="1">1 entradas</option>
+                        <option value="2">2 entradas</option>
+                        <option value="3">3 entradas</option>
+                        <option value="4">4 entradas</option>
+                      </select>
+                      <label for="floatingSelect">Valor: $800</label>
+                    </div>
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <section class="carrito container">
           <h2 class="col-12 text-center titulo">Detalle de la compra</h2>
@@ -283,7 +325,7 @@
                 </tr>
                 <tr>
                   <td colspan="2">
-                    <h2 class="precioFinal text-end">TOTAL: $2000</h2>
+                    <h2 class="precioFinal text-end">TOTAL: $2800</h2>
                   </td>
                   <td colspan="2">
                     <button type="button" class="btn btn-success">Finalizar compra</button>
