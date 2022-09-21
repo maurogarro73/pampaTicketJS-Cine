@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "nombre": "Mega Combo",
+    "info": "Contiene un tarro grande de pochoclos + 2 bebidas",
+    "precio": 1200,
+    "img": "../img/combos/megacombo.png",
+    "categoria": "combo"
+  },
+  {
+    "id": 2,
+    "nombre": "Combo Medio",
+    "info": "Contiene una bolsa de pochoclos + 1 bebida",
+    "precio": 800,
+    "img": "../img/combos/comboMedio.png",
+    "categoria": "combo"
+  },
+  {
+    "id": 3,
+    "nombre": "Bebida",
+    "info": "Contiene 1 Bebida a elección",
+    "precio": 400,
+    "img": "../img/combos/bebida.png",
+    "categoria": "unidad"
+  },
+  {
+    "id": 4,
+    "nombre": "Mega Combo +18",
+    "info": "Contiene un tarro grande de pochoclos + 2 cervezas",
+    "precio": 1500,
+    "img": "../img/combos/megacombo+18.png",
+    "categoria": "combo"
+  },
+  {
+    "id": 5,
+    "nombre": "Combo Medio +18",
+    "info": "Contiene una bolsa de pochoclos + 1 cerveza",
+    "precio": 800,
+    "img": "../img/combos/comboMedio+18.png",
+    "categoria": "combo"
+  },
+  {
+    "id": 6,
+    "nombre": "Cerveza",
+    "info": "Contiene 1 cerveza a elección",
+    "precio": 400,
+    "img": "../img/combos/cerveza.png",
+    "categoria": "unidad"
+  },
+  {
+    "id": 7,
+    "nombre": "Combo Pancho",
+    "info": "Contiene 1 pancho + 1 bebida a elección",
+    "precio": 500,
+    "img": "../img/combos/comboPancho+bebida.png",
+    "categoria": "combo"
+  },
+  {
+    "id": 8,
+    "nombre": "Combo Pancho +18",
+    "info": "Contiene 1 pancho + una cerveza a elección",
+    "precio": 700,
+    "img": "../img/combos/comboPancho+18.png",
+    "categoria": "combo"
+  },
+  {
+    "id": 9,
+    "nombre": "Lay's",
+    "info": "Contiene 1 paquete de Lay's",
+    "precio": 300,
+    "img": "../img/combos/lays.png",
+    "categoria": "unidad"
+  },
+  {
+    "id": 10,
+    "nombre": "Mogul",
+    "info": "Contiene 1 paquete de Mogul",
+    "precio": 150,
+    "img": "../img/combos/mogul.png",
+    "categoria": "unidad"
+  },
+  {
+    "id": 11,
+    "nombre": "Rocklets",
+    "info": "Contiene 1 paquete de Rockets",
+    "precio": 150,
+    "img": "../img/combos/rockets.png",
+    "categoria": "unidad"
+  }
+]

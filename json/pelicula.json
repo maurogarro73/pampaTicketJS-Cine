@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nombre": "Terminator",
+    "info": "En el año 2029, después de devastar la Tierra y esclavizar a la humanidad, las máquinas, gobernadas por la inteligencia artificial conocida como Skynet, están a punto de perder la guerra contra la resistencia humana liderada por John Connor.",
+    "precio": 800,
+    "img": "img/terminator.jpg",
+    "linkVideo": "https://www.youtube.com/embed/k64P4l2Wmeg",
+    "fecha": "Desde el 12 de septiembre al 19 de septiembre"
+  },
+  {
+    "id": 2,
+    "nombre": "Pulp Fiction",
+    "info": "La vida de un boxeador, dos sicarios, la esposa de un gánster y dos bandidos se entrelaza en una historia de violencia y redención.",
+    "precio": 800,
+    "img": "img/pulpFiction.jpg",
+    "linkVideo": "https://www.youtube.com/embed/tGpTpVyI_OQ",
+    "fecha": "Desde el 12 de septiembre al 19 de septiembre"
+  },
+  {
+    "id": 3,
+    "nombre": "SCARFACE",
+    "info": "Un inmigrante cubano de las cárceles de Fidel Castro provoca un camino de destrucción en su ascenso en el mundo de las drogas de Miami.",
+    "precio": 800,
+    "img": "img/scarface.jpg",
+    "linkVideo": "https://www.youtube.com/embed/a_z4IuxAqpE",
+    "fecha": "Desde el 12 de septiembre al 19 de septiembre"
+  },
+  {
+    "id": 4,
+    "nombre": "Beetle Juice",
+    "info": "Una pareja que acaba de morir contrata a un fantasma vulgar para asustar a los nuevos ocupantes de su casa.",
+    "precio": 800,
+    "img": "img/beetlejuice.jpg",
+    "linkVideo": "https://www.youtube.com/embed/ickbVzajrk0",
+    "fecha": "Desde el 12 de septiembre al 19 de septiembre"
+  }
+]
