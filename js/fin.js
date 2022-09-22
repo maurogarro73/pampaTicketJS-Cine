@@ -10,7 +10,7 @@ function renderCarrito() {
       <td>${comboComprados[i].nombre}: ${comboComprados[i].info}</td>
       <td>$${comboComprados[i].precio}</td>
       <td></td>
-      <td><i class="bi bi-trash3-fill iconEliminar"></i></td>
+      <td><i class="bi bi-trash3-fill iconEliminar" onclick="eliminarComboCart(${i}); saveToLocalStorage();" ></i></td>
     </tr>`;
   }
   document.getElementById('carrito').innerHTML = htmlCart;
@@ -61,5 +61,21 @@ function agregarAlCarritoCombo(id) {
       comboComprados.push(comboSelect);
       renderCarrito();
       saveToLocalStorage();
+    })
+    .catch((e) => {
+      console.log(e);
+    });
+}
+
+function eliminarComboCart(id) {
+  fetch('../json/combo.json')
+    .then((res) => res.json())
+    .then((combo) => {
+      comboComprados.splice(id, 1);
+      renderCarrito();
+      saveToLocalStorage();
+    })
+    .catch((e) => {
+      console.log(e);
     });
 }
