@@ -244,6 +244,16 @@ body {
   transition: 0.1s;
 }
 
+.finalizarCompra {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.finalizarCompra .precioFinal {
+  text-align: center;
+}
+
 /*
 ========================= FIN NUESTROS COMBOS ==========================
 */
