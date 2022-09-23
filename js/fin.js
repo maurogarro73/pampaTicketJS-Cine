@@ -86,7 +86,9 @@ function eliminarComboCart(id) {
 }
 
 function calcPrecioTotal() {
-  precioTotal = comboComprados.map((combo) => combo.precio).reduce((acc, suma) => acc + suma, 0);
+  precioTotal = comboComprados.reduce((acc, combo) => {
+    return (acc += combo.precio);
+  }, 0);
   document.getElementById('total').innerHTML = 'total: $' + precioTotal;
   saveToLocalStorage();
 }
