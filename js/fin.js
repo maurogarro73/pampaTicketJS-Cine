@@ -1,5 +1,7 @@
 /* let ticketComprados = JSON.parse(localStorage.getItem('productosAgregadosJSON')) || []; */
 let comboComprados = JSON.parse(localStorage.getItem('productosAgregadosJSON')) || [];
+let precioTotal = localStorage.getItem('precioTotal');
+precioTotal = parseInt(precioTotal);
 
 function renderCarrito() {
   let htmlCart = '';
@@ -21,6 +23,7 @@ renderCarrito();
 let saveToLocalStorage = () => {
   let storageJSON = JSON.stringify(comboComprados);
   localStorage.setItem('productosAgregadosJSON', storageJSON);
+  localStorage.setItem('precioTotal', precioTotal);
 };
 
 function renderCombos() {
@@ -61,6 +64,7 @@ function agregarAlCarritoCombo(id) {
       comboComprados.push(comboSelect);
       renderCarrito();
       saveToLocalStorage();
+      calcPrecioTotal();
     })
     .catch((e) => {
       console.log(e);
@@ -74,8 +78,16 @@ function eliminarComboCart(id) {
       comboComprados.splice(id, 1);
       renderCarrito();
       saveToLocalStorage();
+      calcPrecioTotal();
     })
     .catch((e) => {
       console.log(e);
     });
 }
+
+function calcPrecioTotal() {
+  precioTotal = comboComprados.map((combo) => combo.precio).reduce((acc, suma) => acc + suma, 0);
+  document.getElementById('total').innerHTML = 'total: $' + precioTotal;
+  saveToLocalStorage();
+}
+calcPrecioTotal();
