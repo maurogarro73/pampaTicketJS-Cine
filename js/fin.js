@@ -1,7 +1,51 @@
-/* let ticketComprados = JSON.parse(localStorage.getItem('productosAgregadosJSON')) || []; */
-let comboComprados = JSON.parse(localStorage.getItem('productosAgregadosJSON')) || [];
+ticketComprados = JSON.parse(localStorage.getItem('peliAddJSON')) || [];
+let comboComprados = JSON.parse(localStorage.getItem('combosAddJSON')) || [];
 let precioTotal = localStorage.getItem('precioTotal');
 precioTotal = parseInt(precioTotal);
+
+function renderPeliSelect() {
+  let htmlPeliSelect = '';
+  for (let i = 0; i < ticketComprados.length; i++) {
+    htmlPeliSelect = `
+            <div class="col-md-4">
+              <img src="../${ticketComprados[i].img}" class="img-fluid rounded-start" alt="imagen portada">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">${ticketComprados[i].nombre}</h5>
+                <p class="card-text">${ticketComprados[i].info}</p>
+                <p class="card-text">
+                  <small class="text-muted">
+                    <div class="form-floating">
+                      <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                        <option selected>Selecciona fecha</option>
+                        <option value="1">Jue 22/09/2022 - 20 hs</option>
+                        <option value="2">Jue 22/09/2022 - 22:30 hs</option>
+                        <option value="3">Vie 23/09/2022 - 22:30 hs</option>
+                      </select>
+                    </div>
+                  </small>
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">
+                    <div class="form-floating">
+                      <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                        <option selected>Cantidad entradas</option>
+                        <option value="1">1 entradas</option>
+                        <option value="2">2 entradas</option>
+                        <option value="3">3 entradas</option>
+                        <option value="4">4 entradas</option>
+                      </select>
+                      <label for="floatingSelect">Valor: $${ticketComprados[i].precio}</label>
+                    </div>
+                  </small>
+                </p>
+              </div>
+            </div>`;
+  }
+  document.getElementById('peliSelect').innerHTML = htmlPeliSelect;
+}
+renderPeliSelect();
 
 function renderCarrito() {
   let htmlCart = '';
@@ -22,7 +66,7 @@ renderCarrito();
 /* guardar en localStorage */
 let saveToLocalStorage = () => {
   let storageJSON = JSON.stringify(comboComprados);
-  localStorage.setItem('productosAgregadosJSON', storageJSON);
+  localStorage.setItem('combosAddJSON', storageJSON);
   localStorage.setItem('precioTotal', precioTotal);
 };
 
