@@ -1,10 +1,10 @@
 /* Inicio de localStorage */
-let ticketComprados = JSON.parse(localStorage.getItem('peliAddJSON')) || [];
+let peliSelect = JSON.parse(localStorage.getItem('peliAddJSON')) || [];
 
 /* guardar en localStorage */
 let saveToLocalStorage = () => {
-  let storageJSON = JSON.stringify(ticketComprados);
-  localStorage.setItem('peliAddJSON', storageJSON);
+  let storageJSONPeli = JSON.stringify(peliSelect);
+  localStorage.setItem('peliAddJSON', storageJSONPeli);
 };
 
 /* Renderizar eventos peliculas */
@@ -52,7 +52,7 @@ function agregarAlCart(id) {
     .then((res) => res.json())
     .then((peliculas) => {
       const selectPeli = peliculas.find((pelicula) => pelicula.id == id);
-      ticketComprados.push(selectPeli);
+      peliSelect.push(selectPeli);
       saveToLocalStorage();
       window.location.href = '../pages/combos.html';
     })

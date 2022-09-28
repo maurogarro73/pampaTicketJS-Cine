@@ -1,19 +1,19 @@
-ticketComprados = JSON.parse(localStorage.getItem('peliAddJSON')) || [];
+peliSelect = JSON.parse(localStorage.getItem('peliAddJSON')) || [];
 let comboComprados = JSON.parse(localStorage.getItem('combosAddJSON')) || [];
 let precioTotal = localStorage.getItem('precioTotal');
 precioTotal = parseInt(precioTotal);
 
 function renderPeliSelect() {
   let htmlPeliSelect = '';
-  for (let i = 0; i < ticketComprados.length; i++) {
+  for (let i = 0; i < peliSelect.length; i++) {
     htmlPeliSelect = `
             <div class="col-md-4">
-              <img src="../${ticketComprados[i].img}" class="img-fluid rounded-start" alt="imagen portada">
+              <img src="../${peliSelect[i].img}" class="img-fluid rounded-start" alt="imagen portada">
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">${ticketComprados[i].nombre}</h5>
-                <p class="card-text">${ticketComprados[i].info}</p>
+                <h5 class="card-title">${peliSelect[i].nombre}</h5>
+                <p class="card-text">${peliSelect[i].info}</p>
                 <p class="card-text">
                   <small class="text-muted">
                     <div class="form-floating">
@@ -36,10 +36,13 @@ function renderPeliSelect() {
                         <option value="3">3 entradas</option>
                         <option value="4">4 entradas</option>
                       </select>
-                      <label for="floatingSelect">Valor: $${ticketComprados[i].precio}</label>
+                      <label for="floatingSelect">Valor: $${peliSelect[i].precio}</label>
                     </div>
                   </small>
                 </p>
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-warning" onclick="cambiarPeli(${i}); saveToLocalStorage();">Cambiar Película</button>
+                <div>
               </div>
             </div>`;
   }
@@ -68,6 +71,8 @@ let saveToLocalStorage = () => {
   let storageJSON = JSON.stringify(comboComprados);
   localStorage.setItem('combosAddJSON', storageJSON);
   localStorage.setItem('precioTotal', precioTotal);
+  let storageJSONPeli = JSON.stringify(peliSelect);
+  localStorage.setItem('peliAddJSON', storageJSONPeli);
 };
 
 function renderCombos() {
@@ -118,7 +123,7 @@ function agregarAlCarritoCombo(id) {
 function eliminarComboCart(id) {
   fetch('../json/combo.json')
     .then((res) => res.json())
-    .then((combo) => {
+    .then(() => {
       comboComprados.splice(id, 1);
       renderCarrito();
       saveToLocalStorage();
@@ -129,10 +134,20 @@ function eliminarComboCart(id) {
     });
 }
 
+function cambiarPeli(id) {
+  fetch('../json/pelicula.json')
+    .then((res) => res.json())
+    .then(() => {
+      peliSelect.splice(id, 1);
+      saveToLocalStorage();
+      window.location.href = '../index.html';
+    });
+}
+
 function calcPrecioTotal() {
   precioTotal = comboComprados.reduce((acc, combo) => {
     return (acc += combo.precio);
-  }, 0);
+  }, 800);
   document.getElementById('total').innerHTML = 'total: $' + precioTotal;
   saveToLocalStorage();
 }
