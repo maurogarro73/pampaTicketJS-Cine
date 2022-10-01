@@ -17,7 +17,7 @@ function renderPeliSelect() {
                 <p class="card-text">
                   <small class="text-muted">
                     <div class="form-floating">
-                      <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                      <select class="form-select" id="selectFecha" aria-label="Floating label select example">
                         <option selected>Selecciona fecha</option>
                         <option value="1">Jue 22/09/2022 - 20 hs</option>
                         <option value="2">Jue 22/09/2022 - 22:30 hs</option>
@@ -29,14 +29,14 @@ function renderPeliSelect() {
                 <p class="card-text">
                   <small class="text-muted">
                     <div class="form-floating">
-                      <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                      <select class="form-select" id="selectEntrada" onchange="cantidadEntradas();" aria-label="Floating label select example">
                         <option selected>Cantidad entradas</option>
                         <option value="1">1 entradas</option>
                         <option value="2">2 entradas</option>
                         <option value="3">3 entradas</option>
                         <option value="4">4 entradas</option>
                       </select>
-                      <label for="floatingSelect">Valor: $${peliSelect[i].precio}</label>
+                      <label for="selectEntrada" id="valorTotalEntradas">Valor: $${peliSelect[i].precio}</label>
                     </div>
                   </small>
                 </p>
@@ -144,10 +144,19 @@ function cambiarPeli(id) {
     });
 }
 
+/* Calcula el precio en la card dependiendo de cant. entradas seleccionadas */
+let precioEntradas = 0;
+function cantidadEntradas() {
+  let cantEntradas = document.getElementById('selectEntrada').value;
+  precioEntradas = 800 * cantEntradas;
+  document.getElementById('valorTotalEntradas').innerHTML = 'Valor $' + precioEntradas;
+  calcPrecioTotal();
+}
+
 function calcPrecioTotal() {
   precioTotal = comboComprados.reduce((acc, combo) => {
     return (acc += combo.precio);
-  }, 800);
+  }, precioEntradas);
   document.getElementById('total').innerHTML = 'total: $' + precioTotal;
   saveToLocalStorage();
 }
