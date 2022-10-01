@@ -171,3 +171,9 @@ function calcPrecioTotal() {
   saveToLocalStorage();
 }
 calcPrecioTotal();
+
+/* Finalizar Compra */
+let btnFinCompra = document.getElementById('finCompra');
+btnFinCompra.addEventListener('click', finCompra);
+
+function finCompra() {}
