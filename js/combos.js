@@ -17,7 +17,7 @@ function renderPeliSelect() {
                 <p class="card-text">
                   <small class="text-muted">
                     <div class="form-floating">
-                      <select class="form-select" id="selectFecha" aria-label="Floating label select example">
+                      <select class="form-select" id="selectFecha" onchange="seleccionarFecha();" aria-label="Floating label select example">
                         <option selected>Selecciona fecha</option>
                         <option value="1">Jue 22/09/2022 - 20 hs</option>
                         <option value="2">Jue 22/09/2022 - 22:30 hs</option>
@@ -142,6 +142,12 @@ function cambiarPeli(id) {
       saveToLocalStorage();
       window.location.href = '../index.html';
     });
+}
+
+let fechaSelected = '';
+function seleccionarFecha() {
+  let fecha = document.getElementById('selectFecha');
+  let fechaSelected = fecha.options[fecha.selectedIndex].text;
 }
 
 /* Calcula el precio en la card dependiendo de cant. entradas seleccionadas */
