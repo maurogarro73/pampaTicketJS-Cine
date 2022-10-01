@@ -148,8 +148,12 @@ function cambiarPeli(id) {
 let precioEntradas = 0;
 function cantidadEntradas() {
   let cantEntradas = document.getElementById('selectEntrada').value;
-  precioEntradas = 800 * cantEntradas;
-  document.getElementById('valorTotalEntradas').innerHTML = 'Valor $' + precioEntradas;
+  if (isNaN(cantEntradas)) {
+    precioEntradas = 0;
+  } else {
+    precioEntradas = 800 * cantEntradas;
+    document.getElementById('valorTotalEntradas').innerHTML = 'Valor $' + precioEntradas;
+  }
   calcPrecioTotal();
 }
 
