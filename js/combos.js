@@ -199,6 +199,10 @@ function finCompra() {
   emailInput = document.getElementById('email').value;
   nombreInput = document.getElementById('nombre').value;
   apellidoInput = document.getElementById('apellido').value;
-  saveToLocalStorage();
-  window.location.href = '../pages/finCompra.html';
+  if (emailInput == '' || nombreInput == '' || apellidoInput == '') {
+    document.getElementById('error').innerHTML = `<div class="alert alert-warning" role="alert">Por favor complete todos los datos</div>`;
+  } else {
+    saveToLocalStorage();
+    window.location.href = '../pages/finCompra.html';
+  }
 }

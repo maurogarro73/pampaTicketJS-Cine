@@ -103,16 +103,35 @@
               <!-- Formulario -->
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="email@email.com">
+                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="email@email.com" required>
+              </div>
+              <div class="valid-feedback">
+                correcto!
+              </div>
+              <div class="invalid-feedback">
+                por favor ingrese bien un email.
               </div>
               <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre" name="text">
+                <input type="text" class="form-control" id="nombre" name="text" required>
+              </div>
+              <div class="valid-feedback">
+                correcto!
+              </div>
+              <div class="invalid-feedback">
+                por favor ingrese bien un nombre.
               </div>
               <div class="mb-3">
                 <label for="apellido" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="apellido" name="text">
+                <input type="text" class="form-control" id="apellido" name="text" required>
               </div>
+              <div class="valid-feedback">
+                correcto!
+              </div>
+              <div class="invalid-feedback">
+                por favor ingrese bien un apellido.
+              </div>
+              <div id="error"></div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
