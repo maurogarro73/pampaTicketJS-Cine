@@ -1,5 +1,9 @@
 peliSelect = JSON.parse(localStorage.getItem('peliAddJSON')) || [];
 let comboComprados = JSON.parse(localStorage.getItem('combosAddJSON')) || [];
+let precioEntradas = localStorage.getItem('precioEntradas');
+precioEntradas = parseInt(precioEntradas);
+let fechaSelected = localStorage.getItem('fechaSelected');
+let cantEntradasTextoSelect = localStorage.getItem('cantEntradasTextoSelect');
 let precioTotal = localStorage.getItem('precioTotal');
 precioTotal = parseInt(precioTotal);
 
@@ -70,6 +74,9 @@ renderCarrito();
 let saveToLocalStorage = () => {
   let storageJSON = JSON.stringify(comboComprados);
   localStorage.setItem('combosAddJSON', storageJSON);
+  localStorage.setItem('precioEntradas', precioEntradas);
+  localStorage.setItem('fechaSelected', fechaSelected);
+  localStorage.setItem('cantEntradasTextoSelect', cantEntradasTextoSelect);
   localStorage.setItem('precioTotal', precioTotal);
   let storageJSONPeli = JSON.stringify(peliSelect);
   localStorage.setItem('peliAddJSON', storageJSONPeli);
@@ -139,26 +146,33 @@ function cambiarPeli(id) {
     .then((res) => res.json())
     .then(() => {
       peliSelect.splice(id, 1);
+      /* Receteo los valores que tengan que ver con la peli a '' */
+      fechaSelected = '';
+      cantEntradasTextoSelect = '';
+      precioEntradas = 0;
       saveToLocalStorage();
       window.location.href = '../index.html';
     });
 }
 
-let fechaSelected = '';
 function seleccionarFecha() {
   let fecha = document.getElementById('selectFecha');
-  let fechaSelected = fecha.options[fecha.selectedIndex].text;
+  fechaSelected = fecha.options[fecha.selectedIndex].text;
 }
 
 /* Calcula el precio en la card dependiendo de cant. entradas seleccionadas */
-let precioEntradas = 0;
 function cantidadEntradas() {
+  /* Selecciona cant entradas en texto */
+  let cantEntradasTexto = document.getElementById('selectEntrada');
+  cantEntradasTextoSelect = cantEntradasTexto.options[cantEntradasTexto.selectedIndex].text;
+  /* Selecciona cant entradas en numero */
   let cantEntradas = document.getElementById('selectEntrada').value;
   if (isNaN(cantEntradas)) {
     precioEntradas = 0;
   } else {
     precioEntradas = 800 * cantEntradas;
     document.getElementById('valorTotalEntradas').innerHTML = 'Valor $' + precioEntradas;
+    saveToLocalStorage();
   }
   calcPrecioTotal();
 }
@@ -175,5 +189,6 @@ calcPrecioTotal();
 /* Finalizar Compra */
 let btnFinCompra = document.getElementById('finCompra');
 btnFinCompra.addEventListener('click', finCompra);
-
-function finCompra() {}
+function finCompra() {
+  /* window.location.href = '../pages/finCompra.html'; */
+}
