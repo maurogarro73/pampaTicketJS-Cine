@@ -56,10 +56,8 @@
             <p>Detalle de lo adquirido:</p>
             <div id="comprador">
                 <h3>Detalles del comprador:</h3>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><strong>Nombres:</strong>  Mauro</li>
-                    <li class="list-group-item"><strong>Apellido:</strong> Garro</li>
-                    <li class="list-group-item"><strong>Email:</strong> mauro@mauro.com</li>
+                <ul class="list-group list-group-flush" id="datosPersona">
+                    
                 </ul>
             </div>
 
@@ -72,42 +70,28 @@
                             <th scope="col">Img</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Info</th>
+                            <th scope="col">Cantidad Entradas</th>
+                            <th scope="col">Fecha Seleccionada</th>
                         </tr>
                     </thead>
                     <tbody id="peliSelect">
-                        <tr>
+                        <!-- <tr>
                             <td><img src="../img/pulpFiction.jpg" alt="portada pelicula" class="card-img-top img-table"></td>
                             <td>Nombre Pelicula</td>
                             <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo aspernatur nemo quam quidem porro velit quibusdam ex tempora molestias ipsum.</td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>
 
             <!-- Combos seleccionados -->
-            <div class="mt-5">
-                <h3>Combos adquiridos</h3>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Img</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Info</th>
-                        </tr>
-                    </thead>
-                    <tbody id="combosSelect">
-                        <tr>
-                            <td><img src="../img/pulpFiction.jpg" alt="imagen combo" class="card-img-top img-table"></td>
-                            <td>Nombre Combo</td>
-                            <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo aspernatur nemo quam quidem porro velit quibusdam ex tempora molestias ipsum.</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="mt-5" id="combosSelect">
+
             </div>
 
             <div class="finalizarCompra">
-                <h3 class="precioFinal titulo" id="total">Total a abonar en el cine es de $1300</h3>
-                <button type="button" class="btn btn-success boton-finalizar" data-bs-toggle="modal" data-bs-target="#exampleModal">Gracias</button>
+                <h3 class="precioFinal titulo" id="total"></h3>
+                <button type="button" class="btn btn-success boton-finalizar" id="btnGracias">Gracias</button>
             </div>
 
         </section>
