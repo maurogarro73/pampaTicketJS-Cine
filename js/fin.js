@@ -1,0 +1,11 @@
+peliSelect = JSON.parse(localStorage.getItem('peliAddJSON')) || [];
+comboComprados = JSON.parse(localStorage.getItem('combosAddJSON')) || [];
+precioEntradas = localStorage.getItem('precioEntradas');
+precioEntradas = parseInt(precioEntradas);
+fechaSelected = localStorage.getItem('fechaSelected');
+cantEntradasTextoSelect = localStorage.getItem('cantEntradasTextoSelect');
+precioTotal = localStorage.getItem('precioTotal');
+precioTotal = parseInt(precioTotal);
+emailInput = localStorage.getItem('emailInput');
+nombreInput = localStorage.getItem('nombreInput');
+apellidoInput = localStorage.getItem('apellidoInput');

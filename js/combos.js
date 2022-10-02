@@ -6,6 +6,9 @@ let fechaSelected = localStorage.getItem('fechaSelected');
 let cantEntradasTextoSelect = localStorage.getItem('cantEntradasTextoSelect');
 let precioTotal = localStorage.getItem('precioTotal');
 precioTotal = parseInt(precioTotal);
+let emailInput = localStorage.getItem('emailInput');
+let nombreInput = localStorage.getItem('nombreInput');
+let apellidoInput = localStorage.getItem('apellidoInput');
 
 function renderPeliSelect() {
   let htmlPeliSelect = '';
@@ -80,6 +83,9 @@ let saveToLocalStorage = () => {
   localStorage.setItem('precioTotal', precioTotal);
   let storageJSONPeli = JSON.stringify(peliSelect);
   localStorage.setItem('peliAddJSON', storageJSONPeli);
+  localStorage.setItem('emailInput', emailInput);
+  localStorage.setItem('nombreInput', nombreInput);
+  localStorage.setItem('apellidoInput', apellidoInput);
 };
 
 function renderCombos() {
@@ -190,5 +196,9 @@ calcPrecioTotal();
 let btnFinCompra = document.getElementById('finCompra');
 btnFinCompra.addEventListener('click', finCompra);
 function finCompra() {
-  /* window.location.href = '../pages/finCompra.html'; */
+  emailInput = document.getElementById('email').value;
+  nombreInput = document.getElementById('nombre').value;
+  apellidoInput = document.getElementById('apellido').value;
+  saveToLocalStorage();
+  window.location.href = '../pages/finCompra.html';
 }
