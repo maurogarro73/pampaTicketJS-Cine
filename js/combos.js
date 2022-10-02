@@ -227,13 +227,23 @@ calcPrecioTotal();
 let btnFinCompra = document.getElementById('finCompra');
 btnFinCompra.addEventListener('click', finCompra);
 function finCompra() {
-  emailInput = document.getElementById('email').value;
-  nombreInput = document.getElementById('nombre').value;
-  apellidoInput = document.getElementById('apellido').value;
-  if (emailInput == '' || nombreInput == '' || apellidoInput == '') {
-    document.getElementById('error').innerHTML = `<div class="alert alert-warning" role="alert">Por favor complete todos los datos</div>`;
+  /* validando que fecha y cantidad de entradas de la peli estén seleccionadas*/
+  if (fechaSelected == null || cantEntradasTextoSelect == null || fechaSelected == '' || cantEntradasTextoSelect == '') {
+    Swal.fire({
+      icon: 'error',
+      title: 'Cuidado...',
+      text: 'debes elegir la fecha y entradas de la peli',
+    });
   } else {
-    saveToLocalStorage();
-    window.location.href = '../pages/finCompra.html';
+    /* obtiene valores de los input */
+    emailInput = document.getElementById('email').value;
+    nombreInput = document.getElementById('nombre').value;
+    apellidoInput = document.getElementById('apellido').value;
+    if (emailInput == '' || nombreInput == '' || apellidoInput == '') {
+      document.getElementById('error').innerHTML = `<div class="alert alert-warning" role="alert">Por favor complete todos los datos</div>`;
+    } else {
+      saveToLocalStorage();
+      window.location.href = '../pages/finCompra.html';
+    }
   }
 }
