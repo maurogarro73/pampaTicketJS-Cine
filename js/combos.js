@@ -137,10 +137,24 @@ function eliminarComboCart(id) {
   fetch('../json/combo.json')
     .then((res) => res.json())
     .then(() => {
-      comboComprados.splice(id, 1);
-      renderCarrito();
-      saveToLocalStorage();
-      calcPrecioTotal();
+      /* SweetAlert */
+      Swal.fire({
+        title: 'Eliminar combo del carrito?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: 'btn btn-success',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Eliminar',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire('Eliminado!', 'Eliminaste el combo del carrito', 'success');
+          /* elimina el combo del carrito */
+          comboComprados.splice(id, 1);
+          renderCarrito();
+          saveToLocalStorage();
+          calcPrecioTotal();
+        }
+      });
     })
     .catch((e) => {
       console.log(e);
@@ -158,6 +172,9 @@ function cambiarPeli(id) {
       precioEntradas = 0;
       saveToLocalStorage();
       window.location.href = '../index.html';
+    })
+    .catch((e) => {
+      console.log(e);
     });
 }
 
