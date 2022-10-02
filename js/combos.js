@@ -165,13 +165,27 @@ function cambiarPeli(id) {
   fetch('../json/pelicula.json')
     .then((res) => res.json())
     .then(() => {
-      peliSelect.splice(id, 1);
-      /* Receteo los valores que tengan que ver con la peli a '' */
-      fechaSelected = '';
-      cantEntradasTextoSelect = '';
-      precioEntradas = 0;
-      saveToLocalStorage();
-      window.location.href = '../index.html';
+      /* SweetAlert */
+      Swal.fire({
+        title: 'Quieres cambiar de peli?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: 'btn btn-success',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Cambiar',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire('Cambiada!', 'vamos al inicio a elegir otra peli', 'success');
+          /* elimina el combo del carrito */
+          peliSelect.splice(id, 1);
+          /* Receteo los valores que tengan que ver con la peli a '' */
+          fechaSelected = '';
+          cantEntradasTextoSelect = '';
+          precioEntradas = 0;
+          saveToLocalStorage();
+          window.location.href = '../index.html';
+        }
+      });
     })
     .catch((e) => {
       console.log(e);
