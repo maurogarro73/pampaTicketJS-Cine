@@ -1,6 +1,6 @@
 peliSelect = JSON.parse(localStorage.getItem('peliAddJSON')) || [];
 let comboComprados = JSON.parse(localStorage.getItem('combosAddJSON')) || [];
-let precioEntradas = localStorage.getItem('precioEntradas');
+let precioEntradas = localStorage.getItem('precioEntradas') || 0;
 precioEntradas = parseInt(precioEntradas);
 let fechaSelected = localStorage.getItem('fechaSelected');
 let cantEntradasTextoSelect = localStorage.getItem('cantEntradasTextoSelect');
